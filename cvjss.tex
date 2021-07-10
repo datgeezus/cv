@@ -1,0 +1,217 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,      
+    urlcolor=blue
+    }
+
+% \colorlinks=true
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-1pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Jesus Sanchez} & \faEnvelope \, \href{mailto:jesus.sanchez@outlook.com}{jesus.sanchez@outlook.com}\\
+ \href{https://www.linkedin.com/in/jesus-sanchez-sevilla}{\faLinkedin \, /jesus-sanchez-sevilla}  & \faPhone \, +1-857-320-5056 \\
+\end{tabular*}
+
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Twitter}{Boston, MA}
+      {Software Engineer}{Dec 2019 - Present}
+      \resumeItemListStart
+        \resumeItem{Ads Serving Platform}
+          {As part the \href{https://blog.twitter.com/engineering/en_us/topics/infrastructure/2020/building-twitters-ad-platform-architecture-for-the-future}{Ads Serving Platform}
+          team, I worked in the re-architechture of the AdServer pipeline, transitioning to a
+          rule-based system for selecting ads.
+          I also participated in the implementation of a \href{https://blog.twitter.com/engineering/en_us/topics/infrastructure/2021/sharding-simplification-and-twitters-ads-serving-platform}{Sharding Library}
+          to simplify the management of sharded microservices in the pipeline and
+          collaborated with the research team in the introduction of new products
+          by providing the infrastructure support such as experimentation, data fetching and processing. }
+      \resumeItemListEnd
+      
+% --------Multiple Positions Heading------------
+    \resumeSubheading
+      {GE Aviation}{Queretaro, Mexico}
+      {Senior Software Engineer}{Apr 2019 - Nov 2019}
+      \resumeItemListStart
+        \resumeItem{Digital Cloud Solutions}
+          {Software Engineer part of a group working in the connected aircraft, leveraging Azure cloud
+          and web technologies to transmit flight data to and from ground.
+          I also participated in the porting of existing software base from PPC to ARM architecture
+          Other activities included: code reviews, mentoring, planning.}
+        \resumeSubHeadingListStart
+          \resumeSubItem{Connected Aircraft / NEXTNet-avSync}
+          {Developed microservices to get flight information from airplanes, process it and send it 
+          to the cloud (part Avionica's \href{https://avionica.com/wp-content/uploads/2021/03/NEXTNet-avSYNC-product-brochure.pdf}{NEXTNet-avSync}).}
+        \resumeSubHeadingListEnd
+      \resumeItemListEnd
+   \resumeSubSubheading
+    {Embedded Software Engineer}{May 2014 - Apr 2019}
+    \resumeItemListStart
+       \resumeItem{Avionics \& Digital Systems}
+         {Technical leader for Mexico’s team of an IR\&D project that focuses on next-generation flight decks, improving the graphical capabilities of display apps and exploring new ways of human-machine interaction.}
+        \resumeSubHeadingListStart
+          \resumeSubItem{Virtual OpenGL}
+          {Participated in the design and implementation of a custom graphics API based on OpenGL ES
+          with the objective to modernize current flight deck graphics stack, improving not only the
+          performance but also the time from design to implementation. Designed and developed tools to
+          integrate high-level design software (like Inkscape and VisualStudio) with our graphics stack.
+          Developed the cross platform build system for the graphics API, with support for Windows and Linux, 
+          as well as custom embedded Linux images that included our custom graphics back-end, ZMQ, 
+          example applications of our HMIs and remote debugging.}
+          \resumeSubItem{Digital moving map}
+          {Led the development of a digital moving map, designed and build an API for remote drawing, 
+          interaction and control, part of the \href{https://www.geaviation.com/systems/avionics/open-flight-deck}{Open Flight Deck} project.}
+          \resumeSubItem{RPC System}
+          {Designed and implemented a simple RPC system for sending avionics information on top of
+          \href{https://zeromq.org/}{ZMQ}, written in C and with client and server APIs for C, Python, C\#, 
+          as well as a code generator for transforming JSON formated data model definition files to 
+          ZMQ C API.}
+           \resumeSubItem{Landing Gear System Monitor}
+          {Led the design and development of a landing gear system monitor application, test methodology
+          and integration support at the client's facilities.}
+          \resumeSubItem{Other}
+          {Conducted global training sessions for users of our Avionics stack, participated in the 
+          organization of two successful hackathons directed towards both students 
+          and professionals wanting to experience GE’s engineering challenges.}
+        \resumeSubHeadingListEnd
+    \resumeItemListEnd
+   \resumeSubHeadingListEnd
+%-------------------------------------------
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Benemerita Universidad Autonoma de Puebla}{Puebla, Mexico}
+      {Master of Science in Electronics}{Aug. 2011 -- Jun. 2013}
+   \resumeSubSubheading
+      {Bacherol of Engineering in Mechatronics}{Aug. 2005 -- May. 2010}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Autonomous Mobile Robot}
+      {\href{https://github.com/datgeezus/mobile_robot}{\faGithub \, mobile\_robot}
+      | \, Mobile robot platform for academic research (Patent \textbf{\href{https://drive.google.com/file/d/1DsnaAByaBixFv9GfyCH6JUAA95fj8aTY/view}{MX/I/2018/100659}}). }
+    \resumeSubItem{dsPIC Peripheral Libraries}
+      {\href{https://github.com/datgeezus/dspic33f_pic24h_corelibs}{\faGithub \, dspic33f\_pic24h\_corelibs} 
+      | \,  Peripheral libraries with support for UART, SPI, I2C, I/O, QEI, Timers, ADC for the PIC24/dsPIC33F 
+      family of microcontrollers.}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: C, Python, Java, C++, Typescript}
+   }
+   \item{
+     \textbf{Technologies/Frameworks}{: OpenGL, Azure, Git, Angular, Yocto, Spring, Finagle }
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
