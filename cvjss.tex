@@ -1,8 +1,4 @@
-%-------------------------
-% Resume in Latex
-% Author : Sourabh Bajaj
-% License : MIT
-%------------------------
+% based on the template from Sourabh Bajaj
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -64,7 +60,6 @@
   }
 }
 
-% Just in case someone needs a heading that does not need to be in a list
 \newcommand{\resumeHeading}[4]{
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -95,10 +90,13 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+ % Variables
+ \def \ASP{https://blog.twitter.com/engineering/en_us/topics/infrastructure/2020/building-twitters-ad-platform-architecture-for-the-future}
+ \def \ShardLib{https://blog.twitter.com/engineering/en_us/topics/infrastructure/2021/sharding-simplification-and-twitters-ads-serving-platform}
+ \def \NextNet{https://avionica.com/wp-content/uploads/2021/03/NEXTNet-avSYNC-product-brochure.pdf}
+ \def \OFD{https://www.geaviation.com/systems/avionics/open-flight-deck}
+ \def \Patent{https://drive.google.com/file/d/1DsnaAByaBixFv9GfyCH6JUAA95fj8aTY/view}
 %-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
 %----------HEADING-----------------
@@ -118,36 +116,40 @@
       {Software Engineer}{Dec 2019 - Present}
       \resumeItemListStart
         \resumeItem{Ads Serving Platform}
-          {As part the \href{https://blog.twitter.com/engineering/en_us/topics/infrastructure/2020/building-twitters-ad-platform-architecture-for-the-future}{Ads Serving Platform}
-          team, I worked in the re-architechture of the AdServer pipeline, transitioning to a
-          rule-based system for selecting ads.
-          I also participated in the implementation of a \href{https://blog.twitter.com/engineering/en_us/topics/infrastructure/2021/sharding-simplification-and-twitters-ads-serving-platform}{Sharding Library}
-          to simplify the management of sharded microservices in the pipeline and
-          collaborated with the research team in the introduction of new products
-          by providing the infrastructure support such as experimentation, data fetching and processing. }
+          {As part of the \href{\ASP}{Ads Serving Platform} team, I've worked in the re-architechture of the AdServer platform,
+          completing the transition to a microservices based architechture and continue its improvement
+          in areas like configuration, experimentation and scalability.}
+        \resumeSubHeadingListStart
+          \resumeSubItem{AdServer}{Worked in the design and implementation of a rule-based configuration
+          system to enable a dynamic ad selection pipeline.}
+          \resumeSubItem{ShardLib}{Participated in the implementation of a \href{\ShardLib}{Sharding Library},
+          used to simplify the management of sharded microservices in the serving pipeline.}
+          \resumeSubItem{Other}{Regular oncall support for some of the main services used in the ad 
+          serving pipeline. Collaboration with partner teams in the intorudction of new ad products.}
+        \resumeSubHeadingListEnd
       \resumeItemListEnd
       
-% --------Multiple Positions Heading------------
     \resumeSubheading
       {GE Aviation}{Queretaro, Mexico}
       {Senior Software Engineer}{Apr 2019 - Nov 2019}
       \resumeItemListStart
         \resumeItem{Digital Cloud Solutions}
           {Software Engineer part of a group working in the connected aircraft, leveraging Azure cloud
-          and web technologies to transmit flight data to and from ground.
-          I also participated in the porting of existing software base from PPC to ARM architecture
-          Other activities included: code reviews, mentoring, planning.}
+          and web technologies to process flight data.}
         \resumeSubHeadingListStart
           \resumeSubItem{Connected Aircraft / NEXTNet-avSync}
-          {Developed microservices to get flight information from airplanes, process it and send it 
-          to the cloud (part Avionica's \href{https://avionica.com/wp-content/uploads/2021/03/NEXTNet-avSYNC-product-brochure.pdf}{NEXTNet-avSync}).}
+          {Developed microservices to gextract flight data, process it and send it to the cloud 
+          (part Avionica's \href{\NextNet}{NEXTNet-avSync}).}
+          \resumeSubItem{Other}
+          {porting of existing software base from PPC to ARM architecture}
         \resumeSubHeadingListEnd
       \resumeItemListEnd
    \resumeSubSubheading
     {Embedded Software Engineer}{May 2014 - Apr 2019}
     \resumeItemListStart
        \resumeItem{Avionics \& Digital Systems}
-         {Technical leader for Mexico’s team of an IR\&D project that focuses on next-generation flight decks, improving the graphical capabilities of display apps and exploring new ways of human-machine interaction.}
+         {Technical leader for Mexico's team of an IR\&D project that focuses on next-generation 
+         flight decks, improving the graphical capabilities of display apps and exploring new ways of human-machine interaction.}
         \resumeSubHeadingListStart
           \resumeSubItem{Virtual OpenGL}
           {Participated in the design and implementation of a custom graphics API based on OpenGL ES
@@ -157,9 +159,9 @@
           Developed the cross platform build system for the graphics API, with support for Windows and Linux, 
           as well as custom embedded Linux images that included our custom graphics back-end, ZMQ, 
           example applications of our HMIs and remote debugging.}
-          \resumeSubItem{Digital moving map}
+          \resumeSubItem{Digital Moving Map}
           {Led the development of a digital moving map, designed and build an API for remote drawing, 
-          interaction and control, part of the \href{https://www.geaviation.com/systems/avionics/open-flight-deck}{Open Flight Deck} project.}
+          interaction and control, part of the \href{\OFD}{Open Flight Deck} project.}
           \resumeSubItem{RPC System}
           {Designed and implemented a simple RPC system for sending avionics information on top of
           \href{https://zeromq.org/}{ZMQ}, written in C and with client and server APIs for C, Python, C\#, 
@@ -171,11 +173,10 @@
           \resumeSubItem{Other}
           {Conducted global training sessions for users of our Avionics stack, participated in the 
           organization of two successful hackathons directed towards both students 
-          and professionals wanting to experience GE’s engineering challenges.}
+          and professionals wanting to experience GE's engineering challenges.}
         \resumeSubHeadingListEnd
     \resumeItemListEnd
    \resumeSubHeadingListEnd
-%-------------------------------------------
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -189,11 +190,11 @@
 
 
 %-----------PROJECTS-----------------
-\section{Projects}
+\section{Personal Projects}
   \resumeSubHeadingListStart
     \resumeSubItem{Autonomous Mobile Robot}
       {\href{https://github.com/datgeezus/mobile_robot}{\faGithub \, mobile\_robot}
-      | \, Mobile robot platform for academic research (Patent \textbf{\href{https://drive.google.com/file/d/1DsnaAByaBixFv9GfyCH6JUAA95fj8aTY/view}{MX/I/2018/100659}}). }
+      | \, Mobile robot platform for academic research (Patent \textbf{\href{\Patent}{MX/I/2018/100659}}). }
     \resumeSubItem{dsPIC Peripheral Libraries}
       {\href{https://github.com/datgeezus/dspic33f_pic24h_corelibs}{\faGithub \, dspic33f\_pic24h\_corelibs} 
       | \,  Peripheral libraries with support for UART, SPI, I2C, I/O, QEI, Timers, ADC for the PIC24/dsPIC33F 
@@ -202,16 +203,10 @@
 
 
 %--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
- \resumeSubHeadingListStart
-   \item{
-     \textbf{Languages}{: C, Python, Java, C++, Typescript}
-   }
-   \item{
-     \textbf{Technologies/Frameworks}{: OpenGL, Azure, Git, Angular, Yocto, Spring, Finagle }
-   }
- \resumeSubHeadingListEnd
-
-
-%-------------------------------------------
+% \section{Programing skills}
+%  \resumeSubHeadingListStart
+%    \resumeSubItem{Languages}{Java, Python, Scala, C, C++, Typescript}
+%    \resumeSubItem{Technologies/Frameworks}{Finagle, OpenGL, Azure, Git, Angular, Yocto, Spring}
+%  \resumeSubHeadingListEnd
+ 
 \end{document}
